@@ -9,7 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.10",
-    "@astrojs/renderer-react": "^0.4.0"
+    "@astrojs/renderer-react": "^0.4.0",
+    "@types/react": "^17.0.38",
+    "astro": "^0.22.10"
   }
 }

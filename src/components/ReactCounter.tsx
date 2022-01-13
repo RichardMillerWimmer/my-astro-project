@@ -1,7 +1,8 @@
+import React from 'react';
 import { useState } from 'react';
 
-export default function ReactCounter() {
-  const [count, setCount] = useState(0);
+const ReactCounter = (): JSX.Element => {
+  const [count, setCount] = useState<number>(0);
   const add = () => setCount((i) => i + 1);
   const subtract = () => setCount((i) => i - 1);
 
@@ -13,3 +14,5 @@ export default function ReactCounter() {
     </div>
   );
 }
+
+export default ReactCounter

@@ -4,12 +4,14 @@ import Tour from '../components/Tour.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ReactCounter from '../components/ReactCounter.tsx';
 
-const title = 'My Astro Project'
+const title = 'Contact Us!'
 
 ---
 	
 <BaseLayout title={title}>
-	<a href='/contact'>Contact</a>
-	<Tour />
-	<ReactCounter client:load />
+		<h1>Contact Us!</h1>
+        <form>
+            <label>contact:</label>
+            <input type='text'/>
+        </form>
 </BaseLayout>

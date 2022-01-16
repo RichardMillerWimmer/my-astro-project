@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import ReactButton from '../components/buttons/ReactButton.tsx'
 import SvelteButton from '../components/buttons/SvelteButton.svelte'
+import VueButton from '../components/buttons/VueButton.vue'
 ---
 
 <BaseLayout>
@@ -10,5 +11,6 @@ import SvelteButton from '../components/buttons/SvelteButton.svelte'
     <div>
         <ReactButton client:load />
         <SvelteButton client:load />
+        <VueButton client:load />
     </div>
 </BaseLayout>

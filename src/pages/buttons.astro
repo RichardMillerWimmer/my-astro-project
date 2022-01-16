@@ -1,7 +1,12 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ReactButton from '../components/buttons/ReactButton.tsx'
 ---
 
-<section>
-
-</section>
+<BaseLayout>
+    <h1>Buttons</h1>
+    <h3>Each button is using a different framework within Astro.</h3>
+    <div>
+        <ReactButton client:load />
+    </div>
+</BaseLayout>

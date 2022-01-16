@@ -3,7 +3,7 @@ import React from 'react'
 const ReactButton = () => {
 
     const reactAlert = () => {
-        window.alert('This the React component.')
+        window.alert('This is the React component.')
     }
 
     return (

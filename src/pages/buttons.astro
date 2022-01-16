@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import ReactButton from '../components/buttons/ReactButton.tsx'
+import SvelteButton from '../components/buttons/SvelteButton.svelte'
 ---
 
 <BaseLayout>
@@ -8,5 +9,6 @@ import ReactButton from '../components/buttons/ReactButton.tsx'
     <h3>Each button is using a different framework within Astro.</h3>
     <div>
         <ReactButton client:load />
+        <SvelteButton client:load />
     </div>
 </BaseLayout>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ReactButton = () => {
+const ReactButton = (): JSX.Element => {
 
     const reactAlert = () => {
         window.alert('This is the React component.')

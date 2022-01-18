@@ -14,4 +14,9 @@ export default {
   renderers: [
     "@astrojs/renderer-react", "@astrojs/renderer-svelte", "@astrojs/renderer-vue"
   ],
+  markdownOptions: {
+    render: [
+      '@astrojs/markdown-remark'
+    ]
+  }
 };

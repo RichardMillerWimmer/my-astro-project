@@ -1,0 +1,26 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+const {title} = Astro.props
+---
+
+<html lang="en">
+    <head>
+	    <BaseHead title={title}/>
+	    <style>
+            :global(img) {
+                width: 300px;
+                height: auto;
+                margin: 30px auto;
+            }
+            article {
+                margin: 30px auto;
+                width: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <slot />
+        </article>
+    </body>
+</html>

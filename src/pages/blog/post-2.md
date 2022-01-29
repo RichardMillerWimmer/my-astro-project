@@ -4,6 +4,9 @@ title: Example Blog Post 2
 description: This is an example blog post using Markdown and BlogLayout.
 date: 2022-1-20
 author: Richard
+categories:
+  - Astro
+  - Web Development
 ---
 
 # Blog Post 2

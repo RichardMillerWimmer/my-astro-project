@@ -6,6 +6,9 @@ title: Example Blog Post
 description: This is an example blog post using Markdown and BlogLayout.
 date: 2022-1-21
 author: Richard
+categories:
+  - Astro
+  - Turotial
 ---
 
 # Example Blog Post

@@ -1,11 +1,16 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-const title = 'Blog'
+import { generateCategoriesData } from '../utils/helper.ts';
+
+const { content } = Astro.props;
+// console.log(content.categories)
+const allCategories = generateCategoriesData(content.categories);
+// console.log(allCategories)
 ---
 
 <html lang="en">
     <head>
-	    <BaseHead title={title}/>
+	    <BaseHead title={content.title}/>
 	    <style>
             :global(img) {
                 width: 300px;
@@ -19,6 +24,11 @@ const title = 'Blog'
         </style>
     </head>
     <body>
+        <ul>
+            {allCategories.map((elem) => (
+                <li><a href={`/blog/categories/${elem.slug}`}>{elem.name}</a></li>
+            ))}
+        </ul>
         <article>
             <slot />
         </article>

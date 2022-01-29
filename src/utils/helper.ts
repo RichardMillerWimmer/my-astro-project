@@ -3,19 +3,20 @@ type slugObj = {
     slug: string;
 }
 
-const generateSlug = (category: string): string => {
+function generateSlug(category: string): string {
     return category
-        .toString()
-        .trim()
-        .toLocaleLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/\-\-+/g, '-')
-        .replace(/^-+/, '')
-        .replace(/-+$/, '');
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
 }
 
-export const generateCategorysData = (categories: string[]): slugObj[] => {
+export function generateCategoriesData(categories: string[]): slugObj[] {
+    console.log(categories)
     let categoriesData = categories.map((elem) => {
         return {
             name: elem,

@@ -1,0 +1,42 @@
+---
+// Component Imports
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+import { generateCategoriesData } from '../../../utils/helper.ts';
+const allPosts = Astro.fetchContent('../*.md');
+
+export async function getStaticPaths() {
+    const allPosts = Astro.fetchContent('../*.md')
+    const sortedPosts = allPosts.sort((a, b) => new Date(b.data).valueOf() - new Date(a.date).valueOf())
+    const categoriesSet = new Set<string>();
+    sortedPosts.forEach((elem) => {
+        elem.categories && elem.categories.forEach((elem) => {
+            categoriesSet.add(elem)
+        })
+    })
+    const categoriesArray = Array.from(categoriesSet)
+    const categoriesData = generateCategoriesData(categoriesArray) 
+    // console.log(categoriesData)
+    const mappedPosts = generateCategoriesData.map(category => {
+        const posts = sortedPosts.filter(elem => elem.categories.includes(category.name))
+        return {
+            params: {slug: category.slug},
+            props: {
+                category: category.name,
+                posts: posts
+            }
+        }
+    })
+
+}
+
+const { page } = Astro.props;
+const title = 'Blog Categories ';
+
+---
+	
+<BaseLayout title={title}>
+    <div>
+        <h1>{title}</h1>
+    </div>
+</BaseLayout>

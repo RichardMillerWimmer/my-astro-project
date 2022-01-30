@@ -5,16 +5,16 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { generateCategoriesData } from '../../../utils/helper.ts';
 const allPosts = Astro.fetchContent('../*.md');
 
-const categoriesSet = new Set();
+const categoriesSet = new Set<string>();
 allPosts.forEach((elem) => {
     elem.categories && elem.categories.forEach((elem) => {
         categoriesSet.add(elem)
     })
 })
-// console.log(categoriesSet)
+const categoriesArray = Array.from(categoriesSet)
 
-const categoriesSetData = generateCategoriesData(categoriesSet)
-console.log(categoriesSetData)
+const categoriesData = generateCategoriesData(categoriesArray)
+console.log(categoriesData)
 
 const { page } = Astro.props;
 const title = 'Blog Categories ';

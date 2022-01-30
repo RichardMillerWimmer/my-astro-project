@@ -16,7 +16,6 @@ function generateSlug(category: string): string {
 }
 
 export function generateCategoriesData(categories: string[]): slugObj[] {
-    console.log(categories)
     let categoriesData = categories.map((elem) => {
         return {
             name: elem,

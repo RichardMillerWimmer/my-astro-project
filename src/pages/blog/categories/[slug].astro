@@ -17,8 +17,15 @@ export async function getStaticPaths() {
     const categoriesArray = Array.from(categoriesSet)
     const categoriesData = generateCategoriesData(categoriesArray) 
     // console.log(categoriesData)
-    const mappedPosts = generateCategoriesData.map(category => {
-        const posts = sortedPosts.filter(elem => elem.categories.includes(category.name))
+    return categoriesData.map(category => {
+        // console.log('category' ,category)
+        // console.log('sortedPosts', sortedPosts)
+        const posts = sortedPosts.filter(post => {
+            // console.log(category.name)
+            return post.categories.includes(category.name)
+            })
+        
+        console.log('posts', posts)
         return {
             params: {slug: category.slug},
             props: {
@@ -29,14 +36,20 @@ export async function getStaticPaths() {
     })
 
 }
-
-const { page } = Astro.props;
-const title = 'Blog Categories ';
+ 
+const { category, posts } = Astro.props;
+const title = `Blog Posts Under ${category}`;
+console.log(Astro.props)
 
 ---
 	
 <BaseLayout title={title}>
     <div>
         <h1>{title}</h1>
+        <ul>
+            {posts.map(post => (
+                <li>{post.title}</li>
+            ))}
+        </ul>
     </div>
 </BaseLayout>

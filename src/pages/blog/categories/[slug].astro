@@ -48,7 +48,7 @@ console.log(Astro.props)
         <h1>{title}</h1>
         <ul>
             {posts.map(post => (
-                <li>{post.title}</li>
+                <li><a href={post.url}>{post.title}</a></li>
             ))}
         </ul>
     </div>

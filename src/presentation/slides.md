@@ -41,3 +41,50 @@ Using Astro allows you to ship HTML and CSS with as little JavaScript as possibl
 Astro uses its own files marked by the .astro extension.
 There is a VS Code extension for working with .astro files.
 This looks a lot like HTML (and JSX) plus the top frontmatter.
+
+---
+
+## Partial Hydration
+
+By default everything is rendered to HTML and no JavaScript is send to the client.
+Astro has an opt-in mentality for components that need JavaScript on the frontend.
+Including the `client` prop on the component allows you to hydrate that component on the front end.
+
+---
+
+## Frameworks
+
+Astro support rendering frameworks inside an Astro app.
+
+- React
+- Svelte
+- Vue
+- Solid
+- Preact
+- Alpine
+- Lit
+- Vanilla JS
+
+---
+
+## Getting Started
+
+🚀`npm init astro` - no need to install a new package globally
+
+<!-- .element: class="fragment" -->
+
+🚀`npm install`
+
+<!-- .element: class="fragment" -->
+
+🚀`npm run dev`
+
+<!-- .element: class="fragment" -->
+
+🚀`npm run build`
+
+<!-- .element: class="fragment" -->
+
+---
+
+## Let's look at a sample project!

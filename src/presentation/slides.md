@@ -1,6 +1,6 @@
 # Astro
 
-## Build fast websites, faster.
+![Astro Logo](AstroPost.jpg)
 
 ---
 
@@ -18,9 +18,21 @@ Using Astro allows you to ship HTML and CSS with as little JavaScript as possibl
 
 ---
 
-- Astro syntax, .astro file extension
-- Partial Hydration - Island Architecture
-- Use your favorite framework or frameworks in an Astro app
+## Key Features
+
+<div class='align-left'>
+🚀 Astro syntax - .astro file extension
+
+<!-- .element: class="fragment" -->
+
+🚀 Partial Hydration - Island Architecture
+
+<!-- .element: class="fragment" -->
+
+🚀 Use your favorite framework or frameworks in an Astro app
+
+<!-- .element: class="fragment" -->
+</div>
 
 ---
 

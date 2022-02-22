@@ -1,3 +1,7 @@
+---
+theme: moon
+---
+
 # Astro
 
 ![Astro Logo](AstroPost.jpg)

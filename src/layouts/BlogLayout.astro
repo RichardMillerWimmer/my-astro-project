@@ -3,9 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import { generateCategoriesData } from '../utils/helper.ts';
 
 const { content } = Astro.props;
-// console.log(content.categories)
 const allCategories = generateCategoriesData(content.categories);
-// console.log(allCategories)
 ---
 
 <html lang="en">

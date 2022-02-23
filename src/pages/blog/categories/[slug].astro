@@ -16,12 +16,8 @@ export async function getStaticPaths() {
     })
     const categoriesArray = Array.from(categoriesSet)
     const categoriesData = generateCategoriesData(categoriesArray) 
-    // console.log(categoriesData)
     return categoriesData.map(category => {
-        // console.log('category' ,category)
-        // console.log('sortedPosts', sortedPosts)
         const posts = sortedPosts.filter(post => {
-            // console.log(category.name)
             return post.categories.includes(category.name)
             })
         
